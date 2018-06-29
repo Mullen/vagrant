@@ -3,7 +3,6 @@
 # https://raw.githubusercontent.com/Mullen/vagrant/master/scripts/php7.sh
 
 hash php 2>/dev/null || {
-  sudo yum install -y nano
   sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
   sudo yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
   sudo yum install -y yum-utils
