@@ -22,6 +22,26 @@ ln -sf /home/vagrant/.bash_it/aliases/available/git.aliases.bash /home/vagrant/.
 # Adding git plugin
 
 # bashrc
-echo "export BASH_IT_THEME='bobby'" >> /home/vagrant/.bashrc
+cat <<EOT >> /home/vagrant/.bashrc
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="/home/vagrant/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export BASH_IT_THEME='bobby'
+EOT
 
 exit 0
